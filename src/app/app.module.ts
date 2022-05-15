@@ -15,6 +15,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MiAgendaComponent } from './components/mi-agenda/mi-agenda.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatIconModule} from "@angular/material/icon";
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
