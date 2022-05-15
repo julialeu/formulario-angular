@@ -17,6 +17,11 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatIconModule} from "@angular/material/icon";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 
 
 
@@ -25,7 +30,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     AppComponent,
     HomeComponent,
     MiAgendaComponent,
-    ContactosComponent
+    ContactosComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatSnackBarModule,
     MatTableModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
