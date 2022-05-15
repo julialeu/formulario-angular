@@ -9,11 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { LoginComponent } from './components/login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MiAgendaComponent } from './components/mi-agenda/mi-agenda.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { MatTableModule } from '@angular/material/table';
@@ -23,7 +21,6 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     MiAgendaComponent,
     ContactosComponent
   ],
@@ -38,7 +35,6 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatProgressSpinnerModule,
     MatTableModule
   ],
   providers: [],
