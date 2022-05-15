@@ -20,6 +20,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 
 
 
@@ -31,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     MiAgendaComponent,
     ContactosComponent,
-    CrearUsuarioComponent
+    CrearUsuarioComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,

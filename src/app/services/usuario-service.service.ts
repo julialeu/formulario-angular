@@ -32,11 +32,29 @@ export class UsuarioServiceService {
   constructor() {
   }
 
-  getUsuario() {
+  getUsuarios() {
     return this.LISTA_USUARIOS.slice();
   }
 
+  getUsuario(index: number) {
+    return this.LISTA_USUARIOS[index];
+  }
+
+
+
   eliminarUsuario(index: number) {
     this.LISTA_USUARIOS.splice(index, 1);
+  }
+
+  agregarUsuario(usuario: Usuario) {
+     this.LISTA_USUARIOS.unshift(usuario);
+  }
+
+  editarUsuario(index: number) {
+    this.LISTA_USUARIOS.splice(index);
+  }
+
+  editarUsuarioConcreto(usuario: Usuario, index: number) {
+    this.LISTA_USUARIOS[index] = usuario;
   }
 }

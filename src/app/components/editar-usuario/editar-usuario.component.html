@@ -1,8 +1,8 @@
-<h1>Crear usuario</h1>
+<h1>Editar usuario</h1>
 
 <div>
   <mat-card style="margin-top: 10px">
-    <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+    <form [formGroup]="form" (ngSubmit)="editarUsuario()">
       <mat-grid-list cols="4" rowHeight="70px">
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <mat-form-field appearance="fill">
@@ -54,7 +54,7 @@
               <option value="hombre">Hombre</option>
               <option value="mujer">Mujer</option>
               <option value="otro">Otro</option>
-              <option value="no-especificado">No especificado</option>
+              <option value="No especificado">No especificado</option>
             </select>
           </mat-form-field>
         </mat-grid-tile>

@@ -55,7 +55,7 @@
           >
             <mat-icon>search</mat-icon>
           </a>
-          <a class="pointer" style="color: #1f516f" matTooltip="Editar usuario">
+          <a class="pointer" [routerLink]="['/editar-usuario/', i]" style="color: #1f516f" matTooltip="Editar usuario">
             <mat-icon>edit</mat-icon>
           </a>
           <a class="pointer" (click)="eliminarUsuario(i)"  style="color: #e15639" matTooltip="Eliminar usuario">

@@ -25,7 +25,7 @@ export class ContactosComponent implements OnInit {
   }
 
   cargarUsuarios() {
-    this.listaDeUsuarios = this._usuarioService.getUsuario();
+    this.listaDeUsuarios = this._usuarioService.getUsuarios();
     this.dataSource = new MatTableDataSource(this.listaDeUsuarios);
   }
 
@@ -36,4 +36,8 @@ export class ContactosComponent implements OnInit {
     this.cargarUsuarios();
   }
 
+  editarUsuario(index: number) {
+    this._usuarioService.editarUsuario(index);
+    this.cargarUsuarios();
+  }
 }
