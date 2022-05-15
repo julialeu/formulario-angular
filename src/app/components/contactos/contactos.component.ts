@@ -1,28 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Usuario} from 'src/app/Interfaces/usuario';
-
-const LISTA_USUARIOS: Usuario[] = [
-  {
-    Nombre: 'Julia', Apellidos: 'Leuenberger', Edad: 32,
-    Dni: '28456891A', Cumpleanyos: '21-01-1990',
-    ColorFavorito: 'Amarillo', Genero: 'Mujer'
-  },
-  {
-    Nombre: 'Xabier', Apellidos: 'Legasa', Edad: 37,
-    Dni: '28456891S', Cumpleanyos: '27-11-1984',
-    ColorFavorito: 'Amarillo', Genero: 'Mujer'
-  },
-  {
-    Nombre: 'Gato', Apellidos: 'Leuenberger', Edad: 6,
-    Dni: '28456892P', Cumpleanyos: '01-09-2015',
-    ColorFavorito: 'Negro', Genero: 'No especificado'
-  },
-  {
-    Nombre: 'Coco', Apellidos: 'Legasa', Edad: 4,
-    Dni: '66456891A', Cumpleanyos: '11-11-2018',
-    ColorFavorito: 'Amarillo', Genero: 'No especificado'
-  }
-];
+import {MatTableDataSource} from "@angular/material/table";
+import {UsuarioServiceService} from "../../services/usuario-service.service";
 
 @Component({
   selector: 'app-contactos',
@@ -31,14 +10,30 @@ const LISTA_USUARIOS: Usuario[] = [
 })
 export class ContactosComponent implements OnInit {
 
+  listaDeUsuarios: Usuario[] = [];
+
   displayedColumns: string[] = ['Nombre', 'Apellidos', 'Edad', 'Dni',
   'Cumpleanyos', 'ColorFavorito', 'Genero', 'Acciones'];
-  dataSource = LISTA_USUARIOS;
+  dataSource!: MatTableDataSource<any>;
 
-  constructor() {
+  constructor(private _usuarioService: UsuarioServiceService) {
   }
 
   ngOnInit(): void {
+
+    this.cargarUsuarios();
+  }
+
+  cargarUsuarios() {
+    this.listaDeUsuarios = this._usuarioService.getUsuario();
+    this.dataSource = new MatTableDataSource(this.listaDeUsuarios);
+  }
+
+  eliminarUsuario(index: number) {
+    console.log(index);
+
+    this._usuarioService.eliminarUsuario(index);
+    this.cargarUsuarios();
   }
 
 }
